@@ -359,6 +359,7 @@
 "Assets/Scripts/LookAround.cs"
 "Assets/Scripts/MovePlayer.cs"
 "Assets/Scripts/Script1.cs"
+"Assets/Scripts/Script_Lab5.cs"
 -langversion:9.0
 
 /deterministic

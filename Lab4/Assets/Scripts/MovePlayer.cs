@@ -6,7 +6,7 @@ public class Example : MonoBehaviour
 {
     private CharacterController controller;
     private Vector3 playerVelocity;
-    private bool groundedPlayer;
+    private bool groundedPlayer = false;
     private float playerSpeed = 5.0f;
     private float jumpHeight = 5.0f;
     private float gravityValue = -9.81f;
@@ -33,12 +33,20 @@ public class Example : MonoBehaviour
         }
 
         // Changes the height position of the player..
-        if (Input.GetButtonDown("Jump") && groundedPlayer)
+        if (Input.GetButtonDown("Jump") && groundedPlayer == false)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Przeszkoda"))
+        {
+            Debug.Log("Kontakt z przeszkoda");
+        }
     }
 }
