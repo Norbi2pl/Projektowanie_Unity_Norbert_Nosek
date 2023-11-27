@@ -9,7 +9,6 @@ public class CollisionSound : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PlayCollisionSound();
-        Debug.Log("aa");
         }
     }
 

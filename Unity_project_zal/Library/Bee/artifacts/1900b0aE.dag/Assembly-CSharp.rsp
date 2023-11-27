@@ -361,6 +361,7 @@
 "Assets/scripts/Checkpoint1.cs"
 "Assets/scripts/CollisionSound.cs"
 "Assets/scripts/PlayerMove.cs"
+"Assets/scripts/TimeCheck.cs"
 -langversion:9.0
 
 /deterministic
