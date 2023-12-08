@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerMove : MonoBehaviour
@@ -26,5 +27,6 @@ public class PlayerMove : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
 
         transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+
     }
 }
