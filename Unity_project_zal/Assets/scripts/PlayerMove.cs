@@ -28,5 +28,8 @@ public class PlayerMove : MonoBehaviour
 
         transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
 
+        if (Input.GetKey(KeyCode.Escape))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + -1);
+
     }
 }
